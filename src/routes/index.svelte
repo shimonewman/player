@@ -67,15 +67,15 @@
     <div style="margin-top: 20px">
         <form id="playerForm" name="playerForm">
             <select id=mode bind:value={mode}>
-                <option value="local">Local</option>
                 <option value="remote">Remote</option>
+                <option value="local">Local</option>
             </select>
             <select id="output" bind:value={output}>
                 <option value="hls">HLS</option>
                 <option value="dash">DASH</option>
             </select>
             <input id="projectId" type="text" bind:value={projectId} style="width:200px" placeholder="projectId"/>
-            <input id="videoId" type="text" bind:value={videoId} style="width:200px" placeholder="videoId"/>
+            <input id="videoId"   type="text" bind:value={videoId} style="width:200px" placeholder="videoId"/>
             <button type="button" on:click={loadAsset} style="background-color:#FFC0CB;border-radius: 6px;">Load</button>
         </form>
     </div>
