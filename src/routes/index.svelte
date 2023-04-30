@@ -12,7 +12,7 @@
 
     const url = [];
     url["local"] = "http://127.0.0.1";
-    url["remote"] = "https:/video.appwrite.org";
+    url["remote"] = "https://vod.appwrite.org";
 
     let projectId = $page.url.searchParams.get('projectId');
     let videoId   = $page.url.searchParams.get('videoId');
@@ -61,7 +61,7 @@
     </div>
     <div  style="width:960px;height:540px">
         <video id="video-player"  class="video-js vjs-default-skin " controls autoplay style="width:960px;height:540px">
-            <source src={src} type="{type}"/>
+            <source src={src} type="{type}"  />
         </video>
     </div>
     <div style="margin-top: 20px">
