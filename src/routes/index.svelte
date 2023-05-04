@@ -32,7 +32,8 @@
 
         let player =  videojs('video-player');
         src = `${url[mode]}/v1/videos/${videoId}/outputs/${output}/${fileName[output]}?project=${projectId}`;
-        type = contentType[output]
+        type = contentType[output];
+        player.hlsQualitySelector();
         player.src({
             src: src,
             type: type
@@ -60,7 +61,7 @@
         <input type="text" bind:value={src} style="width:900px;margin-bottom: 20px"/>
     </div>
     <div  style="width:960px;height:540px">
-        <video id="video-player"  class="video-js vjs-default-skin " controls autoplay style="width:960px;height:540px">
+        <video id="video-player"  class="video-js" controls  style="width:960px;height:540px">
             <source src={src} type="{type}"  />
         </video>
     </div>
